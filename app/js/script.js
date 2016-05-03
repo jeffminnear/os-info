@@ -1,10 +1,12 @@
 'use strict';
 
-const $           = require('cheerio');
-const os          = require('os');
-const prettyBytes = require('pretty-bytes');
+
 
 $(function () {
+  
+  const os          = require('os');
+  const prettyBytes = require('pretty-bytes');
+
   $('.operating-system .platform').append('<span>' + os.platform() + '</span>');
   $('.operating-system .release').append('<span>' + os.release() + '</span>');
   $('.operating-system .arch').append('<span>' + os.arch() + '</span>');
